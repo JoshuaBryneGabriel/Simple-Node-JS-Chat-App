@@ -1,0 +1,27 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Live Server",
+            "type": "chrome",
+            "request": "launch",
+            "file": "${workspaceFolder}/path/to/your/index.html"
+        },
+        {
+            "name": "Nodemon",
+            "type": "node",
+            "request": "launch",
+            "program": "${workspaceFolder}/path/to/your/node/server.js",
+            "restart": true,
+            "runtimeExecutable": "nodemon",
+            "runtimeArgs": ["--inspect"],
+            "port": 9229
+        }
+    ],
+    "compounds": [
+        {
+            "name": "Live Server + Nodemon",
+            "configurations": ["Live Server", "Nodemon"]
+        }
+    ]
+}
